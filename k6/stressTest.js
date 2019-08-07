@@ -24,6 +24,7 @@ const restaurantOptions = [
 ];
 
 export const options = {
+  rps: 500,
   vus: 300,
   duration: '1m',
 };
@@ -60,7 +61,6 @@ export default function () {
     { headers: { 'Content-Type': 'application/json' } }
   );
 
-  sleep(10);
   http.request(
     'POST',
     `http://localhost:3006/booking/create/${postRestaurantID}`,
